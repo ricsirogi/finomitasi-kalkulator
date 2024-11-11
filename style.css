@@ -1,0 +1,35 @@
+#alap {
+  border-color: blue;
+  border-width: 5px;
+  border-style: solid;
+  background-color: lightblue;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.horizontal-items {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+body,
+input,
+button {
+  font-size: 4vmin;
+}

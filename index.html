@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Finomítási kalkulátor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="alap">
+        <div id="input-section">
+            <div class="horizontal-items">
+                <label for=" diameter">Átmérő</label><br>
+                <input type="text" id="diameter" name="diameter" value="455"> mm
+            </div><br>
+            <div class="horizontal-items">
+                <label for="height">Magasság</label><br>
+                <input type="text" id="height" name="height" value="590"> mm<br>
+            </div><br>
+            <div class="horizontal-items">
+                <label for="alcohol-degree">Valódi szeszfok</label><br>
+                <input type="text" id="alcohol-degree" name="alcohol-degree" value="25"> mm<br>
+            </div><br>
+        </div>
+        <div id="output-section">
+            <div class="horizontal-items">
+                <p>Folyadék mennyiség (L)</p>
+                <p id="volume"> 0</p>
+            </div><br>
+            <div class="horizontal-items">
+                <p>0,5% (dl)</p>
+                <p id="point-five-dl"> 0</p>
+            </div><br>
+            <div class="horizontal-items">
+                <p>0,5% (L)</p>
+                <p id="point-five-l"> 0</p>
+            </div><br>
+            <div class="horizontal-items">
+                <p>3% (dl)</p>
+                <p id="three-dl"> 0</p>
+            </div><br>
+            <div class="horizontal-items">
+                <p>3% (L)</p>
+                <p id="three-l"> 0</p>
+            </div><br>
+            <div class="horizontal-items">
+                <p>Előpárlat (dl)</p>
+                <p id="eloparlat"> 0</p>
+            </div><br>
+        </div>
+
+        <div class="horizontal-items">
+            <button id="calculate">Számol</button>
+        </div>
+
+        <p id="result">Terület: x cm<sup>3</sup></p>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
