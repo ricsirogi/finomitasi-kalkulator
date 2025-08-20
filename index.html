@@ -17,9 +17,12 @@
                 <label for="alcohol-degree">Valódi szeszfok</label><br>
             </div>
             <div id="inputs">
-                <div><input type="text" id="diameter" name="diameter" value="455"> mm</div>
-                <div><input type="text" id="height" name="height" value="590"> mm<br></div>
-                <div><input type="text" id="alcohol-degree" name="alcohol-degree" value="30"> % V/V<br></div>
+                <div>
+                    <input type="text" id="diameter" name="diameter" value="455" onfocus="this.select()"> mm
+                </div>
+                <div><input type="text" id="height" name="height" value="0" onfocus="this.select()"> mm<br></div>
+                <div><input type="text" id="alcohol-degree" name="alcohol-degree" value="0" onfocus="this.select()"> %
+                    V/V<br></div>
             </div>
         </div>
         <button id="valSzeszButton" style="margin-bottom:10px; margin-top:5px"> Valódi szeszfok kalkulátor </button>
@@ -55,6 +58,7 @@
 
         <div class="vertical-items">
             <button id="calculate" style="margin-bottom:20px; margin-top:10px">Számolás!</button>
+            <p style="color:red" id="error"></p>
             <hr>
             <button id="higitasKalkButton" style="margin-bottom:10px; margin-top:10px"> Hígítás kalkulátor </button>
 

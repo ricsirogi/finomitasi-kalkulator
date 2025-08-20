@@ -7,6 +7,8 @@ let diameterInput = document.getElementById("diameter")
 let alcoholDegreeInput = document.getElementById("alcohol-degree")
 let heightInput = document.getElementById("height")
 
+
+let errorP = document.getElementById("error")
 let originalVolumeOutput = document.getElementById("original-volume")
 let volumeOutput = document.getElementById("volume")
 let pointFiveDlOutput = document.getElementById("point-five-dl")
@@ -15,12 +17,25 @@ let threeDlOutput = document.getElementById("three-dl")
 let threeLOutput = document.getElementById("three-l")
 let eloparlatOutput = document.getElementById("eloparlat")
 
+
 calculateButton.addEventListener("click", (event) => {
     let diameter = diameterInput.value
     let height = heightInput.value
     let degree = alcoholDegreeInput.value
     let pointFivePercent = 0.5
     let threePercent = 3
+
+    if (height <= 0 || !height || degree <= 0 || !degree || diameter <= 0 || !diameter) {
+        errorP.innerText = "Töltse ki az összes mezőt helyesen!";
+        errorP.style.animation = "flashing 1.5s";
+        errorP.addEventListener("animationend", function handler() {
+            errorP.style.animation = "";
+            errorP.removeEventListener("animationend", handler);
+        });
+        return
+    } else {
+        errorP.innerText = "";
+    }
 
     let volume = pi * ((diameter / 2) ** 2) * height // mm^3
     volume = volume / 1000000 // dm^3

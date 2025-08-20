@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 90%;
 }
 body {
   font-family: Arial, sans-serif;
@@ -79,4 +80,79 @@ p {
 
 #output-section p {
   font-size: 110%;
+}
+
+button {
+  border-style: outset;
+  border-width: 3px;
+}
+
+button:active {
+  border-style: inset;
+}
+
+@keyframes flashing {
+  0% {
+    color: #ff0000;
+  }
+  5% {
+    color: #800000;
+  }
+  10% {
+    color: #ff0000;
+  }
+  15% {
+    color: #800000;
+  }
+  20% {
+    color: #ff0000;
+  }
+  25% {
+    color: #800000;
+  }
+  30% {
+    color: #ff0000;
+  }
+  35% {
+    color: #800000;
+  }
+  40% {
+    color: #ff0000;
+  }
+  45% {
+    color: #800000;
+  }
+  50% {
+    color: #ff0000;
+  }
+  55% {
+    color: #800000;
+  }
+  60% {
+    color: #ff0000;
+  }
+  65% {
+    color: #800000;
+  }
+  70% {
+    color: #ff0000;
+  }
+  75% {
+    color: #800000;
+  }
+  80% {
+    color: #ff0000;
+  }
+  85% {
+    color: #800000;
+  }
+  90% {
+    color: #ff0000;
+  }
+  95% {
+    color: #800000;
+  }
+  100% {
+    color: #ff0000;
+  }
 }
