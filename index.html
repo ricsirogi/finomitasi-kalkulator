@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h1>Kétlépcsős kisüsti pálinka finomítási kalkulátor</h1>
     <div id="alap">
         <div id="input-section" class="horizontal-items">
             <div id="labels">
@@ -29,15 +30,28 @@
         <hr>
         <div id="output-section" class="horizontal-items">
             <div id="output-labels-div">
-                <p>Alszesz mennyiség (L) </p>
-                <p>25% V/V-ra hígítva (L) </p>
+                <p>Alszesz mennyiség </p>
+                <p>25% V/V-ra hígítva </p>
                 <hr>
-                <p>0,5% (dl) </p>
-                <p>0,5% (L) </p>
-                <p>3% (dl) </p>
-                <p>3% (L) </p>
+                <div class="horizontal-items">
+                    <p style="margin-right:10px">Rézeleje</p>
+                    <div style="margin-bottom:5px" class="vertical-items">
+                        <p>0,5% </p>
+                        <p>0,5% </p>
+                    </div>
+                </div>
+                <div class="horizontal-items">
+                    <div class="vertical-items">
+                        <p style="margin-right:10px">Teljes</p>
+                        <p style="margin-right:10px">Előpárlat</p>
+                    </div>
+                    <div class="vertical-items">
+                        <p>3% </p>
+                        <p>3% </p>
+                    </div>
+                </div>
                 <hr>
-                <p><b>Előpárlat (dl)</b></p>
+                <p><b>Előpárlat </b></p>
             </div>
 
             <div id="output-values-div">
@@ -45,7 +59,7 @@
                 <p id="volume" class="output-values"> 0</p>
                 <hr>
                 <p id="point-five-dl" class="output-values"> 0</p>
-                <p id="point-five-l" class="output-values"> 0</p>
+                <p id="point-five-l" class="output-values" style="margin-bottom:5px"> 0</p>
                 <p id="three-dl" class="output-values"> 0</p>
                 <p id="three-l" class="output-values"> 0</p>
                 <hr>
@@ -59,13 +73,14 @@
         <div class="vertical-items">
             <button id="calculate" style="margin-bottom:20px; margin-top:10px">Számolás!</button>
             <p style="color:red" id="error"></p>
-            <hr>
+            <hr style="width:100%">
             <button id="higitasKalkButton" style="margin-bottom:10px; margin-top:10px"> Hígítás kalkulátor </button>
 
         </div>
 
         <script src="script.js"></script>
     </div>
+    <h1>Sok sikert :)</h1>
 </body>
 
 </html>

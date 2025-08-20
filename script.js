@@ -26,7 +26,7 @@ calculateButton.addEventListener("click", (event) => {
     let threePercent = 3
 
     if (height <= 0 || !height || degree <= 0 || !degree || diameter <= 0 || !diameter) {
-        errorP.innerText = "Töltse ki az összes mezőt helyesen!";
+        errorP.innerText = "Töltsd ki az összes mezőt helyesen!";
         errorP.style.animation = "flashing 1.5s";
         errorP.addEventListener("animationend", function handler() {
             errorP.style.animation = "";
@@ -44,13 +44,13 @@ calculateButton.addEventListener("click", (event) => {
     pointFivePercent = ((modifiedVolume / 100) * 0.5) * 10
     threePercent = ((modifiedVolume / 100) * 3) * 10
 
-    originalVolumeOutput.innerHTML = volume.toFixed(2)
-    volumeOutput.innerHTML = modifiedVolume.toFixed(2)
-    pointFiveDlOutput.innerHTML = pointFivePercent.toFixed(2)
-    pointFiveLOutput.innerHTML = (pointFivePercent / 10).toFixed(2)
-    threeDlOutput.innerHTML = threePercent.toFixed(2)
-    threeLOutput.innerHTML = (threePercent / 10).toFixed(2)
-    eloparlatOutput.innerHTML = threePercent.toFixed(2)
+    originalVolumeOutput.innerHTML = volume.toFixed(2) + " L"
+    volumeOutput.innerHTML = modifiedVolume.toFixed(2) + " L"
+    pointFiveDlOutput.innerHTML = pointFivePercent.toFixed(2) + " dl"
+    pointFiveLOutput.innerHTML = (pointFivePercent / 10).toFixed(2) + " L"
+    threeDlOutput.innerHTML = threePercent.toFixed(2) + " dl"
+    threeLOutput.innerHTML = (threePercent / 10).toFixed(2) + " L"
+    eloparlatOutput.innerHTML = threePercent.toFixed(2) + " dl"
 })
 
 valSzeszButton.addEventListener("click", (event) => {
