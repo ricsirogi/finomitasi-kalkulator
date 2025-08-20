@@ -76,3 +76,7 @@ input,
 p {
   font-size: 5vmin;
 }
+
+#output-section p {
+  font-size: 110%;
+}
