@@ -1,9 +1,13 @@
 const pi = Math.PI
 let calculateButton = document.getElementById("calculate")
+let valSzeszButton = document.getElementById("valSzeszButton")
+let higitasKalkButton = document.getElementById("higitasKalkButton")
+
 let diameterInput = document.getElementById("diameter")
 let alcoholDegreeInput = document.getElementById("alcohol-degree")
 let heightInput = document.getElementById("height")
 
+let originalVolumeOutput = document.getElementById("original-volume")
 let volumeOutput = document.getElementById("volume")
 let pointFiveDlOutput = document.getElementById("point-five-dl")
 let pointFiveLOutput = document.getElementById("point-five-l")
@@ -18,19 +22,30 @@ calculateButton.addEventListener("click", (event) => {
     let pointFivePercent = 0.5
     let threePercent = 3
 
-    let volume = pi * (diameter ** 2) * height // mm^3
+    let volume = pi * ((diameter / 2) ** 2) * height // mm^3
     volume = volume / 1000000 // dm^3
     let modifiedVolume = (volume * degree) / 25
 
-    pointFivePercent = modifiedVolume * 0.005
-    threePercent = modifiedVolume * 0.03
+    pointFivePercent = ((modifiedVolume / 100) * 0.5) * 10
+    threePercent = ((modifiedVolume / 100) * 3) * 10
 
-    volumeOutput.innerHTML = modifiedVolume.toFixed(2) + " dm<sup>3</sup>"
-    pointFiveDlOutput.innerHTML = pointFivePercent.toFixed(2) + " dl"
-    pointFiveLOutput.innerHTML = pointFivePercent.toFixed(2) / 10 + " l"
-    threeDlOutput.innerHTML = threePercent.toFixed(2) + " dl"
-    threeLOutput.innerHTML = threePercent.toFixed(2) / 10 + " l"
-    eloparlatOutput.innerHTML = modifiedVolume.toFixed(2) + " l"
+    originalVolumeOutput.innerHTML = volume.toFixed(2)
+    volumeOutput.innerHTML = modifiedVolume.toFixed(2)
+    pointFiveDlOutput.innerHTML = pointFivePercent.toFixed(2)
+    pointFiveLOutput.innerHTML = (pointFivePercent / 10).toFixed(2)
+    threeDlOutput.innerHTML = threePercent.toFixed(2)
+    threeLOutput.innerHTML = (threePercent / 10).toFixed(2)
+    eloparlatOutput.innerHTML = threePercent.toFixed(2)
 })
+
+valSzeszButton.addEventListener("click", (event) => {
+    window.open("https://kalkulator.evinfo.hu/kalkulator/palinka/valodi-szeszfok", "_blank");
+})
+
+higitasKalkButton.addEventListener("click", (event) => {
+    window.open("https://kalkulator.evinfo.hu/kalkulator/palinka/higitas", "_blank");
+})
+
+
 
 // L * valodi szeszfok, ezt /25-tel; Ennek a számnak kell a 0.5% és 3%
