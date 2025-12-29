@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finomítási kalkulátor</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,6 +11,12 @@
 <body>
     <h1>Kétlépcsős kisüsti pálinka finomítási kalkulátor</h1>
     <div id="alap">
+        <div id="info-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+            <p id="date"></p>
+            <p>Ebből készült:</p>
+            <input style="width:100%" type="text" id="fruit" name="gyömölcs" onfocus="this.select()">
+        </div>
+        <hr style="margin-top:5px; margin-bottom:5px">
         <div id="input-section" class="horizontal-items">
             <div id="labels">
                 <label for=" diameter">Üst átmérő</label><br>
@@ -19,11 +25,11 @@
             </div>
             <div id="inputs">
                 <div>
-                    <input type="text" id="diameter" name="diameter" value="455" onfocus="this.select()"> mm
+                    <input type="text" id="diameter" name="diameter" value="455" onfocus="this.select()"> mm 
                 </div>
-                <div><input type="text" id="height" name="height" value="0" onfocus="this.select()"> mm<br></div>
+                <div><input type="text" id="height" name="height" value="0" onfocus="this.select()"> mm<sup>*</sup><br></div>
                 <div><input type="text" id="alcohol-degree" name="alcohol-degree" value="0" onfocus="this.select()"> %
-                    V/V<br></div>
+                    V/V<sup>*</sup><br></div>
             </div>
         </div>
         <button id="valSzeszButton" style="margin-bottom:10px; margin-top:5px"> Valódi szeszfok kalkulátor </button>
@@ -36,8 +42,8 @@
                 <div class="horizontal-items">
                     <p style="margin-right:10px">Rézeleje</p>
                     <div style="margin-bottom:5px" class="vertical-items">
-                        <p>0,5% </p>
-                        <p>0,5% </p>
+                        <p>0.5% </p>
+                        <p>0.5% </p>
                     </div>
                 </div>
                 <div class="horizontal-items">
@@ -80,7 +86,10 @@
 
         <script src="script.js"></script>
     </div>
-    <h1>Sok sikert :)</h1>
+    <div>
+        <h1>Sok sikert :)</h1>
+        <p>*: tizedes törtet <b>ponttal</b> kell írni, <b>nem</b> vesszővel</p>
+    </div>
 </body>
 
 </html>

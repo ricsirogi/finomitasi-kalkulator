@@ -3,10 +3,11 @@ let calculateButton = document.getElementById("calculate")
 let valSzeszButton = document.getElementById("valSzeszButton")
 let higitasKalkButton = document.getElementById("higitasKalkButton")
 
+let dateP = document.getElementById("date")
+
 let diameterInput = document.getElementById("diameter")
 let alcoholDegreeInput = document.getElementById("alcohol-degree")
 let heightInput = document.getElementById("height")
-
 
 let errorP = document.getElementById("error")
 let originalVolumeOutput = document.getElementById("original-volume")
@@ -17,7 +18,22 @@ let threeDlOutput = document.getElementById("three-dl")
 let threeLOutput = document.getElementById("three-l")
 let eloparlatOutput = document.getElementById("eloparlat")
 
+function logDate() {
+  const now = new Date();
 
+  const yyyy = now.getFullYear();
+  const mm = String(now.getMonth() + 1).padStart(2, '0');
+  const dd = String(now.getDate()).padStart(2, '0');
+  const hh = String(now.getHours()).padStart(2, '0');
+  const min = String(now.getMinutes()).padStart(2, '0');
+
+  dateP.innerHTML = (`${yyyy}. ${mm}. ${dd}. ${hh}:${min}`);
+}
+
+logDate()
+setInterval(logDate, 1000);
+
+ 
 calculateButton.addEventListener("click", (event) => {
     let diameter = diameterInput.value
     let height = heightInput.value

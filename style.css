@@ -10,20 +10,22 @@
   flex-direction: column;
   width: 90%;
 }
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  justify-content: center;   /* horizontal center */
+  align-items: center;   /* TOP align */
+  min-height: 100vh;         /* allow scrolling */
   flex-direction: column;
 }
 
 input {
   width: 4em;
 }
+
 h1 {
   text-align: center;
   font-size: 7vmin;
@@ -41,6 +43,7 @@ h1 {
   padding: 0;
   margin: 0;
 }
+
 .vertical-items {
   display: flex;
   align-items: center;
@@ -69,6 +72,7 @@ button {
 
 div {
   margin-bottom: 0px;
+  
 }
 body,
 input,
