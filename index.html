@@ -11,15 +11,29 @@
 <body>
     <h1>Kétlépcsős kisüsti pálinka finomítási kalkulátor</h1>
     <div id="alap">
-        <div id="info-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center">
-            <p id="date"></p>
-            <p>Ebből készült:</p>
-            <input style="width:100%" type="text" id="fruit" name="gyömölcs" onfocus="this.select()">
+        <div id="info-container" style="display: flex; flex-direction: column; align-items: stretch; justify-content: center; width: 100%;">
+            <p id="date" style="text-align:center;"></p>
+            <div class="horizontal-items" style="display:flex; width:100%;">
+                <label for="fruit" style="margin-right: 10px; font-size:large;">Gyümölcsfajták:</label>
+
+                <select id="fruit"style="font-size:large" onchange="checkOther(this)">
+                    <option value="Szőlő">Szőlő</option>
+                    <option value="Alma">Alma</option>
+                    <option value="Körte">Körte</option>
+                    <option value="Barack">Barack</option>
+                    <option value="Szilva">Szilva</option>
+                    <option value="Birs">Birs</option>
+                    <option value="Egyéb">Egyéb</option>
+                </select>
+
+                <input type="text" id="otherFruit"
+                    style="display:none; flex:1; min-width:0; margin-left:10px;" onfocus="this.select()">
+            </div>
         </div>
         <hr style="margin-top:5px; margin-bottom:5px">
         <div id="input-section" class="horizontal-items">
             <div id="labels">
-                <label for=" diameter">Üst átmérő</label><br>
+                <label for="diameter">Üst átmérő</label><br>
                 <label for="height">Folyadék magasság</label><br>
                 <label for="alcohol-degree">Valódi szeszfok</label><br>
             </div>
@@ -87,8 +101,7 @@
         <script src="script.js"></script>
     </div>
     <div>
-        <h1>Sok sikert :)</h1>
-        <p>*: tizedes törtet <b>ponttal</b> kell írni, <b>nem</b> vesszővel</p>
+        <p style="font-size: medium;">*: tizedes törtet <b>ponttal</b> kell írni, <b>nem</b> vesszővel</p>
     </div>
 </body>
 

@@ -33,6 +33,16 @@ function logDate() {
 logDate()
 setInterval(logDate, 1000);
 
+function checkOther(select) {
+    const otherInput = document.getElementById("otherFruit");
+    if (select.value === "Egyéb") {
+        otherInput.style.display = "inline-flex"; // so flex works
+        otherInput.focus();
+    } else {
+        otherInput.style.display = "none";
+        otherInput.value = "";
+    }
+}
  
 calculateButton.addEventListener("click", (event) => {
     let diameter = diameterInput.value
